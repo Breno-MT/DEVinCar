@@ -31,7 +31,7 @@ Todos os veículos devem ser derivadas da classe Veículo, que possui os seguint
         Vender veículo
         Listar informações
         Alterar informações:
-        Cor e valor
+            Cor e valor
 
 O DEVinCar também deseja manter um histórico das transferências que deverá armazenar (utilizar conceitos de composição):
     Dados do Veículo
