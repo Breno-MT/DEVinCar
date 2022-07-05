@@ -49,7 +49,7 @@ class Moto(Veiculo):
         self.__rodas = 2
 
 
-class Tricilo(Veiculo):
+class Triciclo(Veiculo):
     def __init__(self, chassi, data_fabricacao, nome, placa, valor, 
     cpf_comprador, cor):
         super().__init__(chassi, data_fabricacao, nome, placa, valor, cpf_comprador, cor)
