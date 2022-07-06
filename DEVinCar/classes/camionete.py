@@ -1,5 +1,7 @@
 from classes.classes import Veiculo
 from uuid import uuid4
+from main import lista_camionetes
+
 
 # Classe Camionete
 class Camionete(Veiculo):
