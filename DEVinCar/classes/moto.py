@@ -1,6 +1,6 @@
 from classes.classes import Veiculo
 from uuid import uuid4
-
+from main import lista_motos
 
 # Classe Moto
 class Moto(Veiculo):
