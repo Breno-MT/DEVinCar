@@ -11,11 +11,12 @@ class Triciclo(Veiculo):
         self.__potencia = 170
         self.__rodas = 3
         self.__gasolina = "Flex"
+        self.__vendido = False
 
     @property
     def listar_info(self):
         print(f"""
-        Chass: {self.__chassi}
+        Chassi: {self.__chassi}
         Triciclo: {self.nome}
         Placa: {self.placa}
         Valor: R$ {self.valor:.2f}
@@ -29,4 +30,17 @@ class Triciclo(Veiculo):
     def alterar_info(self):
         cor_nova = str(input(f"Digite a nova cor do triciclo {self.nome}: "))
         self.cor = cor_nova
+
+    @property
+    def __str__(self):
+        print(f"""
+        Chassi: {self.__chassi}
+        Triciclo: {self.nome}
+        Placa: {self.placa}
+        Valor: R$ {self.valor:.2f}
+        CPF Comprador: {self.cpf_comprador}
+        Cor: {self.cor}
+        Rodas: {self.__rodas}
+        Potencia (Em Cavalos): {self.__potencia}
+        Tipo Gasolina: {self.__gasolina} """)
 
