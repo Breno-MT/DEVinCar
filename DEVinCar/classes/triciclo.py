@@ -1,6 +1,6 @@
 from classes.classes import Veiculo
 from uuid import uuid4
-
+from main import lista_triciclos
 
 class Triciclo(Veiculo):
     def __init__(self, data_fabricacao, nome, placa, valor, 
