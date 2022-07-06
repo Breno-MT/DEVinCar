@@ -11,7 +11,6 @@ lista_camionetes = []
 lista_triciclos = []
 
 
-
 carro_1 = carro.Carro("05/05/2002", "Supra", "GDFG-5466", 15000, "0", "Preta")
 lista_carros.append(carro_1)
 
