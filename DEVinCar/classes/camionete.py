@@ -11,11 +11,12 @@ class Camionete(Veiculo):
         self.__capacidade_cacamba = 1054
         self.__potencia = 225
         self.__gasolina = "Gasolina"
+        self.__vendido = False
     
     @property
     def listar_info(self):
         print(f"""
-        Chass: {self.__chassi}
+        Chassi: {self.__chassi}
         Camionete: {self.nome}
         Placa: {self.placa}
         Valor: R$ {self.valor:.2f}
@@ -31,3 +32,18 @@ class Camionete(Veiculo):
         cor_nova = str(input(f"Digite a nova cor do carro {self.nome}: "))
         self.cor = cor_nova
 
+    @property
+    def __str__(self):
+        print(f"""
+        Chassi: {self.__chassi}
+        Camionete: {self.nome}
+        Placa: {self.placa}
+        Valor: R$ {self.valor:.2f}
+        CPF Comprador: {self.cpf_comprador}
+        Cor: {self.cor}
+        Portas: {self.__portas}
+        Potencia (Em Cavalos): {self.__potencia}
+        Capacidade da Caçamba: {self.__capacidade_cacamba}
+        Tipo Gasolina: {self.__gasolina}
+        
+        """)
