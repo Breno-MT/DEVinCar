@@ -20,3 +20,4 @@ class Veiculo:
     def alterar_info(self):
         pass
     
+    
