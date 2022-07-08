@@ -123,6 +123,8 @@ while True:
             Cor: {x["cor"]}
             Data de Fabricação: {x['data_fabricacao']}
             """)
+        
+        time.sleep(1)
 
     elif opcao == '2':
         for x in lista_carros:
@@ -133,6 +135,8 @@ while True:
             Cor: {x["cor"]}
             Data de Fabricação: {x['data_fabricacao']}
             """)
+        
+        time.sleep(1)
 
     elif opcao == '3':
 
