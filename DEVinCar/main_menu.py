@@ -2,7 +2,7 @@ from classes.cls_carro import Carro
 from classes.cls_moto import Moto
 from classes.cls_triciclo import Triciclo
 from classes.cls_camionete import Camionete
-from classes.data.data_array import lista_carros, lista_motos, lista_camionetes, lista_triciclos
+from classes.data.data_array import lista_carros, lista_motos, lista_camionetes, lista_triciclos, lista_vendidos
 
 import time
 import sys
@@ -177,7 +177,7 @@ while True:
     elif opcao == '5':
         
         # Carros
-        x = ["Carros Disponiveis: " + x['nome'] + " Placa: " + x['placa'] for x in lista_carros if x['vendido'] == False]
+        x = ["Carros Disponiveis: " + x['nome'] + " Placa: " + x['placa'] + " Valor: R$" + str(x['valor']) for x in lista_carros if x['vendido'] == False]
 
         if x != []:
             print(x)
@@ -187,7 +187,7 @@ while True:
         
 
         # Motos
-        y = ["Motos Disponiveis: " + y['nome'] + " Placa: " + y['placa'] for y in lista_motos if y['vendido'] == False]
+        y = ["Motos Disponiveis: " + y['nome'] + " Placa: " + y['placa'] + " Valor: R$" + str(y['valor']) for y in lista_motos if y['vendido'] == False]
 
         if y != []:
             print(y)
@@ -196,7 +196,7 @@ while True:
             print("Não temos motos disponiveis. :(")
         
         # Triciclos
-        z = ["Triciclos Disponiveis: " + z['nome'] + " Placa: " + z['placa'] for z in lista_triciclos if z['vendido'] == False]
+        z = ["Triciclos Disponiveis: " + z['nome'] + " Placa: " + z['placa'] + " Valor: R$" + str(z['valor']) for z in lista_triciclos if z['vendido'] == False]
 
         if z != []:
             print(z)
@@ -206,7 +206,7 @@ while True:
         
 
         # Camionetes
-        h = ["Camionetes Disponiveis: " + h['nome'] + " Placa: " + h['placa'] for h in lista_camionetes if h['vendido'] == False]
+        h = ["Camionetes Disponiveis: " + h['nome'] + " Placa: " + h['placa'] + " Valor: R$" + str(h['valor']) for h in lista_camionetes if h['vendido'] == False]
 
         if h != []:
             print(h)
@@ -257,48 +257,23 @@ while True:
             else:
                 print("Digite apenas uma das opções!")
 
+
     elif opcao == '6':
         # Carros
-        x = ["Carros Vendidos: " + x['nome'] + " Placa: " + x['placa'] + "CPF Comprador: " + x['cpf_comprador'] for x in lista_carros if x['vendido'] == True]
+        x = ["Veículos Vendidos: " + x['nome'] + "," + " Placa: " + x['placa'] + "," + " CPF Comprador: " + x['cpf_comprador'] for x in lista_vendidos if x['vendido'] == True]
 
         if x != []:
             print(x)
 
         elif x == []:
-            print("Não temos carros vendidos. :(")
+            print("Não temos veículos vendidos no momento, seja o primeiro a comprar! ;)")
         
 
-        # Motos
-        y = ["Motos Vendidos: " + y['nome'] + " Placa: " + y['placa'] + "CPF Comprador: " + x['cpf_comprador'] for y in lista_motos if y['vendido'] == True]
-
-        if y != []:
-            print(y)
-
-        elif y == []:
-            print("Não temos motos vendidos. :(")
-        
-        # Triciclos
-        z = ["Triciclos Vendidos: " + z['nome'] + " Placa: " + z['placa'] + "CPF Comprador: " + x['cpf_comprador'] for z in lista_triciclos if z['vendido'] == True]
-
-        if z != []:
-            print(z)
-
-        elif z == []:
-            print("Não temos triciclos vendidos. :(")
-        
-
-        # Camionetes
-        h = ["Camionetes Vendidos: " + h['nome'] + " Placa: " + h['placa'] + "CPF Comprador: " + x['cpf_comprador'] for h in lista_camionetes if h['vendido'] == True]
-
-        if h != []:
-            print(h)
-
-        elif h == []:
-            print("Não temos camionetes vendidos. :(")
-
+    #menor preço
     elif opcao == '7':
         pass
 
+    #maior preço
     elif opcao == '8':
         pass
 
