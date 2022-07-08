@@ -35,7 +35,7 @@ class Triciclo(Veiculo):
 
         placa = str(input("Digite a placa do triciclo: "))
         cor_nova = str(input(f"Digite a nova cor: "))
-        valor_novo = int(input(f"Digite o valor novo R$: "))
+        valor_novo = float(input(f"Digite o valor novo R$: "))
         
         for x in lista_triciclos:
 
