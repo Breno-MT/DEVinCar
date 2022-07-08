@@ -1,6 +1,7 @@
 from classes.classe import Veiculo
 from uuid import uuid4
-
+from classes.data.data_array import lista_camionetes
+from datetime import datetime
 
 
 # Classe Camionete
@@ -34,5 +35,27 @@ class Camionete(Veiculo):
         cor_nova = str(input(f"Digite a nova cor do carro {self.nome}: "))
         self.cor = cor_nova
 
-    def vender_veiculo(self):
-        pass
+    @staticmethod
+    def vender_veiculo():
+        
+        data_compra = datetime.now().strftime("%d/%m/%Y")
+        
+        cpf_cliente = str(input("Antes de começarmos, digite seu CPF (no max. 11 digitos): "))
+
+        placa_escolhida = str(input("Digite a placa desejada: "))
+
+        for x in lista_camionetes:
+            
+            if placa_escolhida == x['placa']:
+
+                x['vendido'] = True
+                x['cpf_comprador'] = cpf_cliente
+
+                return print(f"""
+                ------------ OBRIGADO PELA COMPRA!!! ------------
+                O veículo {x['nome']} foi comprado no valor de R$: {x['valor']:.2f} !
+                Data de compra: {data_compra}
+                """)
+                
+
+        print("A placa não existe ou você não digitou nada, ou você errou a opção. Tente novamente!")
