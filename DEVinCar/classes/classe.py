@@ -1,5 +1,3 @@
-
-
 # Classe Veiculo
 class Veiculo:
     def __init__(self, data_fabricacao, nome, placa, valor: float, cpf_comprador, cor):
@@ -21,5 +19,4 @@ class Veiculo:
     # Método para alterar informações de cor e valor
     def alterar_info(self):
         pass
-    
     
