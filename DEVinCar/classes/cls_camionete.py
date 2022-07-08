@@ -36,7 +36,7 @@ class Camionete(Veiculo):
 
         placa = str(input("Digite a placa da camionete: "))
         cor_nova = str(input(f"Digite a nova cor: "))
-        valor_novo = int(input(f"Digite o valor novo R$: "))
+        valor_novo = float(input(f"Digite o valor novo R$: "))
 
         if valor_novo <= 0:
             print("Digite um valor acima de R$0 !")
