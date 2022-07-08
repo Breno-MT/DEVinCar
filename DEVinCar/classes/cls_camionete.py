@@ -10,10 +10,10 @@ class Camionete(Veiculo):
         super().__init__(data_fabricacao, nome, placa, valor, cpf_comprador, cor)
         idRandom = str(uuid4())
         self.__chassi = idRandom
-        self.__portas = 2
-        self.__capacidade_cacamba = 1054
-        self.__potencia = 225
-        self.__gasolina = "Gasolina"
+        self.portas = 2
+        self.capacidade_cacamba = 1054
+        self.potencia = 225
+        self.gasolina = "Gasolina"
         self.vendido = False
     
     @property
@@ -28,12 +28,36 @@ class Camionete(Veiculo):
         Portas: {self.__portas}
         Potencia (Em Cavalos): {self.__potencia}
         Capacidade da Caçamba: {self.__capacidade_cacamba}
-        Tipo Gasolina: {self.__gasolina}
+        Tipo Gasolina: {self.gasolina}
         """)
     
-    def alterar_info(self):
-        cor_nova = str(input(f"Digite a nova cor do carro {self.nome}: "))
-        self.cor = cor_nova
+    @staticmethod
+    def alterar_info():
+
+        placa = str(input("Digite a placa da camionete: "))
+        cor_nova = str(input(f"Digite a nova cor: "))
+        valor_novo = int(input(f"Digite o valor novo R$: "))
+
+        if valor_novo <= 0:
+            print("Digite um valor acima de R$0 !")
+        
+        elif valor_novo > 0.01:
+            for x in lista_camionetes:
+
+                if placa == x['placa']:
+                    print(f"""--------- VOCÊ ALTEROU A CAMIONETE {x['nome']} --------- 
+                    Cor antiga: {x['cor']}
+                    Cor nova: {cor_nova}
+
+                    Valor antigo R$: {x['valor']:.2f} 
+                    Valor novo: R$ {valor_novo:.2f}
+
+                    """)
+                    x['cor'] = cor_nova
+                    x['valor'] = valor_novo
+                    return
+        
+        print("A placa não existe ou você não digitou nada. Tente novamente!")
 
     @staticmethod
     def vender_veiculo():
@@ -58,7 +82,6 @@ class Camionete(Veiculo):
                 Data de compra: {data_compra}
                 """)
 
-                lista_camionetes.remove(x)
                 return
                 
 
