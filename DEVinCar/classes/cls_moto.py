@@ -11,9 +11,9 @@ class Moto(Veiculo):
 
         idRandom = str(uuid4())
         self.__chassi = idRandom
-        self.__potencia = 170
-        self.__rodas = 2
-        self.__gasolina = "Gasolina"
+        self.potencia = 170
+        self.rodas = 2
+        self.gasolina = "Gasolina"
         self.vendido = False
     
 
@@ -31,9 +31,29 @@ class Moto(Veiculo):
         Tipo Gasolina: {self.__gasolina}
         """)
     
-    def alterar_info(self):
-        cor_nova = str(input(f"Digite a nova cor da moto {self.nome}: "))
-        self.cor = cor_nova
+    @staticmethod
+    def alterar_info():
+
+        placa = str(input("Digite a placa da moto: "))
+        cor_nova = str(input(f"Digite a nova cor: "))
+        valor_novo = int(input(f"Digite o valor novo R$: "))
+        
+        for x in lista_motos:
+
+            if placa == x['placa']:
+                print(f"""--------- VOCÊ ALTEROU A MOTO {x['nome']} --------- 
+                Cor antiga: {x['cor']}
+                Cor nova: {cor_nova}
+
+                Valor antigo R$: {x['valor']} 
+                Valor novo: R$ {valor_novo:.2f}
+
+                """)
+                x['cor'] = cor_nova
+                x['valor'] = valor_novo
+                return
+        
+        print("A placa não existe ou você não digitou nada. Tente novamente!")
 
     @staticmethod
     def vender_veiculo():
@@ -54,7 +74,6 @@ class Moto(Veiculo):
                 O veículo {x['nome']} foi comprado no valor de R$: {x['valor']:.2f} !
                 Data de compra: {data_compra}
                 """)
-                lista_motos.remove(x)
                 
                 return
                 
