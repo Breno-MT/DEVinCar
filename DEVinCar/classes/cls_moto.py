@@ -1,6 +1,6 @@
 from classes.classe import Veiculo
 from uuid import uuid4
-from classes.data.data_array import lista_motos
+from classes.data.data_array import lista_motos, lista_vendidos
 from datetime import datetime
 
 # Classe Moto
@@ -47,11 +47,16 @@ class Moto(Veiculo):
 
                 x['vendido'] = True
                 x['cpf_comprador'] = cpf_cliente
-                return print(f"""
+                lista_vendidos.append(x)
+
+                print(f"""
                 ------------ OBRIGADO PELA COMPRA!!! ------------
                 O veículo {x['nome']} foi comprado no valor de R$: {x['valor']:.2f} !
                 Data de compra: {data_compra}
                 """)
+                lista_motos.remove(x)
+                
+                return
                 
 
         print("A placa não existe ou você não digitou nada. Tente novamente!")
