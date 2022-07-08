@@ -7,6 +7,8 @@ from classes.data.data_array import lista_carros, lista_motos, lista_camionetes,
 import time
 import sys
 
+lista_todos = []
+
 
 carro_1 = Carro("05/05/1978", "Supra", "GDFG-5466", 15000, "0", "Preta")
 carro_2 = Carro("01/01/1980", "RX-7", "KJDO-0981", 15600, "0", "Azul")
@@ -39,6 +41,21 @@ lista_camionetes.append(camionete_3.__dict__)
 
 lista_triciclos.append(triciclo_1.__dict__)
 lista_triciclos.append(triciclo_2.__dict__)
+
+lista_todos.append(carro_1.__dict__)
+lista_todos.append(carro_2.__dict__)
+lista_todos.append(carro_3.__dict__)
+
+lista_todos.append(moto_1.__dict__)
+lista_todos.append(moto_2.__dict__)
+lista_todos.append(moto_3.__dict__)
+
+lista_todos.append(camionete_1.__dict__)
+lista_todos.append(camionete_2.__dict__)
+lista_todos.append(camionete_3.__dict__)
+
+lista_todos.append(triciclo_1.__dict__)
+lista_todos.append(triciclo_2.__dict__)
 
 
 nome_cliente = str(input("Digite o seu nome: "))
@@ -75,9 +92,11 @@ while True:
        |                                                               | 
        | [6] Veículos Vendidos                                         | 
        |                                                               | 
-       | [7] Veículos vendido com o menor preço                        | 
+       | [7] Veículos vendidos com o menor preço                       | 
        |                                                               | 
-       | [8] Veículos vendido com o maior preço                        | 
+       | [8] Veículos vendidos com o maior preço                       | 
+       |                                                               | 
+       | [9] Alterar Cor e Valor de um Veículo                         | 
        |                                                               | 
        | [0] Sair                                                      | 
        |_______________________________________________________________| 
@@ -125,94 +144,84 @@ while True:
                 Cor: {x["cor"]}
                 Data de Fabricação: {x['data_fabricacao']}
                 """)
+        
+        time.sleep(1)
 
     elif opcao == '4':
         print('---'*10)
 
-        for x in lista_carros:
+        for x in lista_todos:
             print(f"""
-            Carro: {x['nome']}
+            Veículo: {x['nome']}
             Placa: {x["placa"]}
             Valor: R$ {x["valor"]:.2f}
             Cor: {x["cor"]}
             Data de Fabricação: {x['data_fabricacao']}
-            """)
-        
-        print('---'*10)
-
-        for x in lista_motos:
-            print(f"""
-            Moto: {x['nome']}
-            Placa: {x["placa"]}
-            Valor: R$ {x["valor"]:.2f}
-            Cor: {x["cor"]}
-            Data de Fabricação: {x['data_fabricacao']}
-            """)
-
-        print('---'*10)
-
-        for x in lista_camionetes:
-            print(f"""
-                Camionetes: {x['nome']}
-                Placa: {x["placa"]}
-                Valor: R$ {x["valor"]:.2f}
-                Cor: {x["cor"]}
-                Data de Fabricação: {x['data_fabricacao']}
-                """)
-
-        print('---'*10)
-
-        for x in lista_triciclos:
-            print(f"""
-            Triciclo: {x['nome']}
-            Placa: {x["placa"]}
-            Valor: R$ {x["valor"]:.2f}
-            Cor: {x["cor"]}
-            Data de Fabricação: {x['data_fabricacao']}
+            Tipo de Gasolina: {x['gasolina']}
+            Potência: {x['potencia']}
             """)
 
         print('---'*10)
         time.sleep(5)
 
     elif opcao == '5':
+
+        for x in lista_carros:
+
+            if x['vendido'] == False and x != []:
+
+                print(f"""
+                Carro Disponível: {x['nome']}
+                Placa: {x['placa']}
+                Valor: R$ {x['valor']}
+                """)
         
-        # Carros
-        x = ["Carros Disponiveis: " + x['nome'] + " Placa: " + x['placa'] + " Valor: R$" + str(x['valor']) for x in lista_carros if x['vendido'] == False]
-
-        if x != []:
-            print(x)
-
-        elif x == []:
-            print("Não temos carros disponiveis. :(")
-        
-
-        # Motos
-        y = ["Motos Disponiveis: " + y['nome'] + " Placa: " + y['placa'] + " Valor: R$" + str(y['valor']) for y in lista_motos if y['vendido'] == False]
-
-        if y != []:
-            print(y)
-
-        elif y == []:
-            print("Não temos motos disponiveis. :(")
-        
-        # Triciclos
-        z = ["Triciclos Disponiveis: " + z['nome'] + " Placa: " + z['placa'] + " Valor: R$" + str(z['valor']) for z in lista_triciclos if z['vendido'] == False]
-
-        if z != []:
-            print(z)
-
-        elif z == []:
-            print("Não temos triciclos disponiveis. :(")
+            elif x == []:
+                print("Não temos carros disponiveis. :(")
         
 
-        # Camionetes
-        h = ["Camionetes Disponiveis: " + h['nome'] + " Placa: " + h['placa'] + " Valor: R$" + str(h['valor']) for h in lista_camionetes if h['vendido'] == False]
+        for x in lista_motos:
 
-        if h != []:
-            print(h)
+            if x['vendido'] == False and x != []:
 
-        elif h == []:
-            print("Não temos camionetes disponiveis. :(")
+                print(f"""
+                Moto Disponível: {x['nome']}
+                Placa: {x['placa']}
+                Valor: R$ {x['valor']}
+                """)
+        
+            elif x == []:
+                print("Não temos motos disponiveis. :(")
+
+    
+        for x in lista_triciclos:
+
+            if x['vendido'] == False and x != []:
+
+                print(f"""
+                Triciclo Disponível: {x['nome']}
+                Placa: {x['placa']}
+                Valor: R$ {x['valor']}
+                """)
+        
+            elif x == []:
+                print("Não temos triciclos disponiveis. :(")
+        
+
+        for x in lista_camionetes:
+
+            if x['vendido'] == False and x != []:
+
+                print(f"""
+                Camionete Disponível: {x['nome']}
+                Placa: {x['placa']}
+                Valor: R$ {x['valor']}
+                """)
+        
+            elif x == []:
+                print("Não temos camionetes disponiveis. :(")
+        
+        time.sleep(1)
         
         ################## 
         # Parte de comprar algum veículo disponível.
@@ -256,26 +265,90 @@ while True:
 
             else:
                 print("Digite apenas uma das opções!")
-
+                time.sleep(1)
 
     elif opcao == '6':
-        # Carros
-        x = ["Veículos Vendidos: " + x['nome'] + "," + " Placa: " + x['placa'] + "," + " CPF Comprador: " + x['cpf_comprador'] for x in lista_vendidos if x['vendido'] == True]
-
-        if x != []:
-            print(x)
-
-        elif x == []:
-            print("Não temos veículos vendidos no momento, seja o primeiro a comprar! ;)")
         
+        for x in lista_vendidos:
 
+            if x != []:
+
+                print(f"""
+                Veículo Vendido: {x['nome']}
+                Placa: {x['placa']}
+                Valor: R$ {x['valor']}
+                CPF Comprador: {x['cpf_comprador']}
+                """)
+        
+            elif x == []:
+                print("Não temos carros vendidos, faça a primeira compra! ;)")
+        
+        time.sleep(1)
+        
     #menor preço
     elif opcao == '7':
-        pass
+
+        list_sorted = sorted(lista_todos, key=lambda value:value["valor"], reverse=False)
+        
+        for x in list_sorted:
+            print(f"""
+            Veículo: {x['nome']}
+            Placa: {x["placa"]}
+            Valor: R$ {x["valor"]:.2f}
+            Cor: {x["cor"]}
+            Data de Fabricação: {x['data_fabricacao']}
+            """)
+        
+        time.sleep(1)
+
 
     #maior preço
     elif opcao == '8':
-        pass
+        list_sorted = sorted(lista_todos, key=lambda value:value["valor"], reverse=True)
+        
+        for x in list_sorted:
+            print(f"""
+            Veículo: {x['nome']}
+            Placa: {x["placa"]}
+            Valor: R$ {x["valor"]:.2f}
+            Cor: {x["cor"]}
+            Data de Fabricação: {x['data_fabricacao']}
+            """)
+        
+        time.sleep(1)
+
+    elif opcao == '9':
+
+        num_opcao = input("""
+        Qual Veículo você quer mudar:
+        ------------ [1] Carro
+        ------------ [2] Moto
+        ------------ [3] Camionete
+        ------------ [4] Triciclo
+        ------------ [0] Sair
+
+
+        ------------ Baseado nessas opções, digite de acordo com seu desejo:
+        -> """)
+
+        if num_opcao == '1':
+            Carro.alterar_info()
+
+        elif num_opcao == '2':
+            Moto.alterar_info()
+
+        elif num_opcao == '3':
+            Camionete.alterar_info()
+
+        elif num_opcao == '4':
+            Triciclo.alterar_info()
+
+        elif num_opcao == '0':
+            pass
+
+        else:
+            print("Digite apenas uma das opções!") 
+            time.sleep(1)
 
     elif opcao == '0':
         print()
