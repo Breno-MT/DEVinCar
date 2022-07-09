@@ -9,7 +9,7 @@ class Camionete(Veiculo):
     def __init__(self, data_fabricacao, nome, placa, valor, cpf_comprador, cor = "Roxo"):
         super().__init__(data_fabricacao, nome, placa, valor, cpf_comprador, cor)
         idRandom = str(uuid4())
-        self.__chassi = idRandom
+        self.chassi = idRandom
         self.portas = 2
         self.capacidade_cacamba = 1054
         self.potencia = 225

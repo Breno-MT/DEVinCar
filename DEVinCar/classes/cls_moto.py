@@ -10,7 +10,7 @@ class Moto(Veiculo):
         super().__init__(data_fabricacao, nome, placa, valor, cpf_comprador, cor)
 
         idRandom = str(uuid4())
-        self.__chassi = idRandom
+        self.chassi = idRandom
         self.potencia = 170
         self.rodas = 2
         self.gasolina = "Gasolina"

@@ -9,7 +9,7 @@ class Triciclo(Veiculo):
     cpf_comprador, cor):
         super().__init__(data_fabricacao, nome, placa, valor, cpf_comprador, cor)
         idRandom = str(uuid4())
-        self.__chassi = idRandom
+        self.chassi = idRandom
         self.potencia = 170
         self.rodas = 3
         self.gasolina = "Flex"
