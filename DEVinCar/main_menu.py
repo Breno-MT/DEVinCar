@@ -186,6 +186,7 @@ while True:
             if x['vendido'] == False and x != []:
 
                 print(f"""
+                Chassi: {x['chassi']}
                 Carro Disponível: {x['nome']}
                 Placa: {x['placa']}
                 Valor: R$ {x['valor']}
@@ -200,6 +201,7 @@ while True:
             if x['vendido'] == False and x != []:
 
                 print(f"""
+                Chassi: {x['chassi']}
                 Moto Disponível: {x['nome']}
                 Placa: {x['placa']}
                 Valor: R$ {x['valor']}
@@ -214,6 +216,7 @@ while True:
             if x['vendido'] == False and x != []:
 
                 print(f"""
+                Chassi: {x['chassi']}
                 Triciclo Disponível: {x['nome']}
                 Placa: {x['placa']}
                 Valor: R$ {x['valor']}
@@ -228,6 +231,7 @@ while True:
             if x['vendido'] == False and x != []:
 
                 print(f"""
+                Chassi: {x['chassi']}
                 Camionete Disponível: {x['nome']}
                 Placa: {x['placa']}
                 Valor: R$ {x['valor']}
