@@ -285,7 +285,7 @@ while True:
                 """)
         
             elif x == []:
-                print("Não temos carros vendidos, faça a primeira compra! ;)")
+                print("Não temos veículos vendidos, faça a primeira compra! ;)")
         
         time.sleep(1)
         
