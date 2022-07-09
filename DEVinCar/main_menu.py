@@ -104,6 +104,7 @@ while True:
        |                                                               | 
          Digite sua opção: """)
 
+    # mostrar motos/triciclos
     if opcao == '1':
 
         for x in lista_motos:
@@ -126,6 +127,7 @@ while True:
         
         time.sleep(1)
 
+    # mostrar carros
     elif opcao == '2':
         for x in lista_carros:
             print(f"""
@@ -138,6 +140,7 @@ while True:
         
         time.sleep(1)
 
+    # mostrar camionetes
     elif opcao == '3':
 
         for x in lista_camionetes:
@@ -151,6 +154,7 @@ while True:
         
         time.sleep(1)
 
+    # mostrar todos veículos
     elif opcao == '4':
         print('---'*10)
 
@@ -168,6 +172,7 @@ while True:
         print('---'*10)
         time.sleep(5)
 
+    # mostrar veículos disponíveis
     elif opcao == '5':
 
         for x in lista_carros:
@@ -271,6 +276,7 @@ while True:
                 print("Digite apenas uma das opções!")
                 time.sleep(1)
 
+    # veículo vendidos
     elif opcao == '6':
         
         for x in lista_vendidos:
@@ -289,7 +295,7 @@ while True:
         
         time.sleep(1)
         
-    #menor preço
+    # menores preços
     elif opcao == '7':
 
         list_sorted = sorted(lista_todos, key=lambda value:value["valor"], reverse=False)
@@ -305,8 +311,7 @@ while True:
         
         time.sleep(1)
 
-
-    #maior preço
+    # maiores preços
     elif opcao == '8':
         list_sorted = sorted(lista_todos, key=lambda value:value["valor"], reverse=True)
         
@@ -321,6 +326,7 @@ while True:
         
         time.sleep(1)
 
+    # altera cor e valor de um veículo
     elif opcao == '9':
 
         num_opcao = input("""
@@ -354,6 +360,7 @@ while True:
             print("Digite apenas uma das opções!") 
             time.sleep(1)
 
+    # finaliza o programa
     elif opcao == '0':
         print()
         break
