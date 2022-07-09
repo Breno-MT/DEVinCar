@@ -8,4 +8,4 @@
 - 🚲 Temos triciclos!
 
 ## 💳 Sistema bancário
-- Contamos com um sistema que você pode fazer depósito de dinheiro e fazer suas compras diretamente no nosso APP 😉!
+- Contamos com um sistema que você pode fazer suas compras diretamente no nosso APP 😉!
