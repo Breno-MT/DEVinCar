@@ -113,6 +113,7 @@ while True:
             Placa: {x["placa"]}
             Valor: R$ {x["valor"]:.2f}
             Cor: {x["cor"]}
+            Tipo de Gasolina: {x['gasolina']}
             Data de Fabricação: {x['data_fabricacao']}
             """)
         
@@ -122,6 +123,7 @@ while True:
             Placa: {x["placa"]}
             Valor: R$ {x["valor"]:.2f}
             Cor: {x["cor"]}
+            Rodas: {x['rodas']}
             Data de Fabricação: {x['data_fabricacao']}
             """)
         
@@ -150,6 +152,8 @@ while True:
                 Valor: R$ {x["valor"]:.2f}
                 Cor: {x["cor"]}
                 Data de Fabricação: {x['data_fabricacao']}
+                Capacidade da Caçamba: {x['capacidade_cacamba']} L (litros)
+                Potência: {x['potencia']}
                 """)
         
         time.sleep(1)
@@ -160,10 +164,12 @@ while True:
 
         for x in lista_todos:
             print(f"""
+            Chassi: {x['chassi']}
             Veículo: {x['nome']}
             Placa: {x["placa"]}
             Valor: R$ {x["valor"]:.2f}
             Cor: {x["cor"]}
+            Rodas: {x['rodas']}
             Data de Fabricação: {x['data_fabricacao']}
             Tipo de Gasolina: {x['gasolina']}
             Potência: {x['potencia']}
