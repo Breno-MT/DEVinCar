@@ -298,6 +298,7 @@ while True:
                 Placa: {x['placa']}
                 Valor: R$ {x['valor']}
                 CPF Comprador: {x['cpf_comprador']}
+                Data de Compra: {x['data_compra']}
                 """)
         
             elif x == []:

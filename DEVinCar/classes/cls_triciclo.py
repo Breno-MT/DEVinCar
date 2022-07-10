@@ -14,6 +14,7 @@ class Triciclo(Veiculo):
         self.rodas = 3
         self.gasolina = "Flex"
         self.vendido = False
+        self.data_compra = ""
 
     @property
     def listar_info(self):
@@ -67,6 +68,7 @@ class Triciclo(Veiculo):
 
                 x['vendido'] = True
                 x['cpf_comprador'] = cpf_cliente
+                x['data_compra'] = data_compra
                 lista_vendidos.append(x)
 
                 print(f"""

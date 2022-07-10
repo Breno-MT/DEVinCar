@@ -15,6 +15,7 @@ class Camionete(Veiculo):
         self.potencia = 225
         self.gasolina = "Gasolina"
         self.vendido = False
+        self.data_compra = ""
     
     @property
     def listar_info(self):
@@ -74,6 +75,7 @@ class Camionete(Veiculo):
 
                 x['vendido'] = True
                 x['cpf_comprador'] = cpf_cliente
+                x['data_compra'] = data_compra
                 lista_vendidos.append(x)
 
                 print(f"""
