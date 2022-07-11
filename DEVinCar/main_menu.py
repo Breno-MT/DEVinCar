@@ -300,6 +300,9 @@ while True:
                 Data de Compra: {x['data_compra']}
                 """)
         
+        if lista_vendidos == []:
+            print("Não temos nenhum veículo vendido no momento, seja o primeiro a comprar ;)")
+        
         time.sleep(1)
         
     # menores preços
