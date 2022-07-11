@@ -174,6 +174,9 @@ while True:
             Potência: {x['potencia']}
             """)
 
+        if lista_todos == []:
+            print("Não temos nenhum veículo na garagem, fomos roubados?")
+
         print('---'*10)
         time.sleep(5)
 
@@ -191,8 +194,8 @@ while True:
                 Valor: R$ {x['valor']}
                 """)
         
-            elif x == []:
-                print("Não temos carros disponiveis. :(")
+        if x == []:
+            print("Não temos carros disponiveis. :(")
         
 
         for x in lista_motos:
@@ -206,8 +209,8 @@ while True:
                 Valor: R$ {x['valor']}
                 """)
         
-            elif x == []:
-                print("Não temos motos disponiveis. :(")
+        if x == []:
+            print("Não temos motos disponiveis. :(")
 
     
         for x in lista_triciclos:
@@ -236,8 +239,8 @@ while True:
                 Valor: R$ {x['valor']}
                 """)
         
-            elif x == []:
-                print("Não temos camionetes disponiveis. :(")
+        if x == []:
+            print("Não temos camionetes disponiveis. :(")
         
         time.sleep(2)
         
