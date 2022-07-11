@@ -6,6 +6,4 @@ lista_camionetes = []
 
 lista_triciclos = []
 
-
 lista_vendidos = []
-
