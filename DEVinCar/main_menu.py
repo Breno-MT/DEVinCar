@@ -169,7 +169,6 @@ while True:
             Placa: {x["placa"]}
             Valor: R$ {x["valor"]:.2f}
             Cor: {x["cor"]}
-            Rodas: {x['rodas']}
             Data de Fabricação: {x['data_fabricacao']}
             Tipo de Gasolina: {x['gasolina']}
             Potência: {x['potencia']}
@@ -300,9 +299,6 @@ while True:
                 CPF Comprador: {x['cpf_comprador']}
                 Data de Compra: {x['data_compra']}
                 """)
-        
-            elif x == []:
-                print("Não temos veículos vendidos, faça a primeira compra! ;)")
         
         time.sleep(1)
         
