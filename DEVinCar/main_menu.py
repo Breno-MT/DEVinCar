@@ -127,7 +127,7 @@ while True:
             Data de Fabricação: {x['data_fabricacao']}
             """)
         
-        time.sleep(1)
+        time.sleep(2)
 
     # mostrar carros
     elif opcao == '2':
@@ -156,7 +156,7 @@ while True:
                 Potência: {x['potencia']}
                 """)
         
-        time.sleep(1)
+        time.sleep(2)
 
     # mostrar todos veículos
     elif opcao == '4':
@@ -239,7 +239,7 @@ while True:
             elif x == []:
                 print("Não temos camionetes disponiveis. :(")
         
-        time.sleep(1)
+        time.sleep(2)
         
         ################## 
         # Parte de comprar algum veículo disponível.
@@ -283,7 +283,7 @@ while True:
 
             else:
                 print("Digite apenas uma das opções!")
-                time.sleep(1)
+                time.sleep(2)
 
     # veículo vendidos
     elif opcao == '6':
@@ -303,7 +303,7 @@ while True:
         if lista_vendidos == []:
             print("Não temos nenhum veículo vendido no momento, seja o primeiro a comprar ;)")
         
-        time.sleep(1)
+        time.sleep(2)
         
     # menores preços
     elif opcao == '7':
@@ -319,7 +319,7 @@ while True:
             Data de Fabricação: {x['data_fabricacao']}
             """)
         
-        time.sleep(1)
+        time.sleep(2)
 
     # maiores preços
     elif opcao == '8':
@@ -334,7 +334,7 @@ while True:
             Data de Fabricação: {x['data_fabricacao']}
             """)
         
-        time.sleep(1)
+        time.sleep(2)
 
     # altera cor e valor de um veículo
     elif opcao == '9':
@@ -368,7 +368,7 @@ while True:
 
         else:
             print("Digite apenas uma das opções!") 
-            time.sleep(1)
+            time.sleep(2)
 
     # finaliza o programa
     elif opcao == '0':
@@ -379,4 +379,4 @@ while True:
         print("---"*6)
         print("Digite apenas as opções listadas.")
         print("---"*6)
-        time.sleep(1)
+        time.sleep(2)
