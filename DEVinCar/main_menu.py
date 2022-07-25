@@ -310,33 +310,46 @@ while True:
         
     # menores preços
     elif opcao == '7':
+        
+        if lista_vendidos != []:
 
-        list_sorted = sorted(lista_todos, key=lambda value:value["valor"], reverse=False)
+            list_sorted = sorted(lista_vendidos, key=lambda value:value["valor"], reverse=False)
         
-        for x in list_sorted:
-            print(f"""
-            Veículo: {x['nome']}
-            Placa: {x["placa"]}
-            Valor: R$ {x["valor"]:.2f}
-            Cor: {x["cor"]}
-            Data de Fabricação: {x['data_fabricacao']}
-            """)
-        
+            for x in list_sorted:
+                print(f"""
+                Veículo: {x['nome']}
+                Placa: {x["placa"]}
+                Valor: R$ {x["valor"]:.2f}
+                Cor: {x["cor"]}
+                Data de Fabricação: {x['data_fabricacao']}
+                """)
+
+        elif lista_vendidos == []:     
+            print("Não temos nenhum comprado! Seja o primeiro ;)")
+
         time.sleep(2)
 
     # maiores preços
     elif opcao == '8':
-        list_sorted = sorted(lista_todos, key=lambda value:value["valor"], reverse=True)
+
+
+
+        if lista_vendidos != []:
+
+            list_sorted = sorted(lista_vendidos, key=lambda value:value["valor"], reverse=True)
         
-        for x in list_sorted:
-            print(f"""
-            Veículo: {x['nome']}
-            Placa: {x["placa"]}
-            Valor: R$ {x["valor"]:.2f}
-            Cor: {x["cor"]}
-            Data de Fabricação: {x['data_fabricacao']}
-            """)
-        
+            for x in list_sorted:
+                print(f"""
+                Veículo: {x['nome']}
+                Placa: {x["placa"]}
+                Valor: R$ {x["valor"]:.2f}
+                Cor: {x["cor"]}
+                Data de Fabricação: {x['data_fabricacao']}
+                """)
+
+        else:     
+            print("Não temos nenhum comprado! Seja o primeiro ;)")
+
         time.sleep(2)
 
     # altera cor e valor de um veículo
